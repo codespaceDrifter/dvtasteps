@@ -20,7 +20,6 @@ TinyStories (500mb stories for kids)
 All The News (10gb news stories from good sources)  
 Reddit Writing Prompts top (2gb top voted reddit fiction)  
 Reddit Eli5 top (2 gb explain like im 5)  
-Blog Authorship Corpus (600MB)  
 Bookcorpus (5gb self published mid quality books)
 
 ## world (40gb)
