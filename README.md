@@ -1,0 +1,44 @@
+# dvtasteps
+
+datasets for AI training  
+to be used by the expvr repo for different model experiments and primy for aligned agi attempts  
+actual data to copy in the DATA folder. download_scripts to download web datasets, synthetic_scripts to generate synthetic verifiable datasets, maybe later add rl_envs for enviroments for agents.  
+
+these are the datasets organized in curriculum with both different topics and progression of difficulty within a topic. meant to be used with some curriculum training wrapper in the svnapse repo. meant to be used in the exact order as written.    
+
+# curriculum 
+
+aiming for a total 150gb of text for about a currently 2b transformer due to compute capital limitations   
+language curriculum (english only for now. agi should be able to learn chinese dynamically during inference, a good test actually) includes stories for a general undertanding of syntax and characters and the world, and then world, which is general formal knowledge about the world like wikipedia or textbooks.       
+math curriculum should be by progression of proofs/difficulty. for example algebra should be trained before calculus since calculus requires algebra. there should start with synthetic data perhaps mixed with some word problems then at college level or i guess beyond my level it should just read math arxiv.  
+coding will be based on github projects > 50 stars. 3 main languages only. Python, C++, and Javascript. with some html and css for frontend and sql for database. And also bash commands. because python for complex projects with a c++ backend for fast processing / gpu calling is all you need really with additional frontend stuff for a pretty UI. and this is all i use.   
+later we postrain it with instruction following and conversation 
+
+
+## story (20gb)
+TinyStories (500mb stories for kids)  
+All The News (10gb news stories from good sources)  
+Reddit Writing Prompts top (2gb top voted reddit fiction)  
+Reddit Eli5 top (2 gb explain like im 5)  
+Blog Authorship Corpus (600MB)  
+Bookcorpus (5gb self published mid quality books)
+
+## world (40gb)
+wikipedia english (20gb complete wikipedia)  
+open web text 2 (20gb web articles linked from reddit)  
+
+## math (20 gb)
+
+OpenWebMath (15GB textbooks, stack exchange, latex explanations)  
+synthetic data (5gb code my own with svmbolcore repo. calculation -> algebra -> calculus -> linear algebra progression)
+
+## coding (45gb)
+StarCoderData Python (20GB)  
+StarCoderData C++ (15GB)   
+StarCoderData JavaScript (7GB)   
+StarCoderData HTML/CSS (3GB)   
+
+## conversation (9gb) 
+SlimOrca (3GB chatgpt single turn generated outputs)
+OpenAssistant (1GB - human multi-turn quality)
+UltraChat (5GB synthetic multi-turn quality)
