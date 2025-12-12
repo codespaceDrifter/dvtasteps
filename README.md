@@ -47,4 +47,4 @@ UltraChat (5GB synthetic multi-turn quality)
 
 # Tokenizer 
 
-we build a custom byte level BPE tokenizer for all language related models. english only currently.  
+we build a custom byte level BPE tokenizer for all language related models. english only currently. 50k vocab.  
