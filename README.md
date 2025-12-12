@@ -17,11 +17,10 @@ coding will be based on github projects > 50 stars. 3 main languages only. Pytho
 later we postrain it with instruction following and conversation 
 
 
-## story (20gb)
+## story (25gb)
 TinyStories (500mb stories for kids)  
 All The News (10gb news stories from good sources)  
-Reddit Writing Prompts top (2gb top voted reddit fiction)  
-Reddit Eli5 top (2 gb explain like im 5)  
+Reddit mix. 2gb each top voted from [Writing Promps, Eli5, todayilearnt philosophy, IAmA] (10gb)
 Bookcorpus (5gb self published mid quality books)
 
 ## world (40gb)
