@@ -1,2 +1,4 @@
 DATA/
 venv/
+TOKENIZED/
+tokenizer_training_data/

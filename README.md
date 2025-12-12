@@ -1,8 +1,10 @@
 # dvtasteps
 
-datasets for AI training  
+complete datasets for AI training  
 to be used by the expvr repo for different model experiments and primy for aligned agi attempts  
-actual data to copy in the DATA folder. download_scripts to download web datasets, synthetic_scripts to generate synthetic verifiable datasets, maybe later add rl_envs for enviroments for agents.  
+actual data in the DATA folder. includes a custom built tokenizer. tokenized data in TOKENIZED folder.
+
+download_scripts to download web datasets, synthetic_scripts to generate synthetic verifiable datasets, maybe later add rl_envs for enviroments for agents.  
 
 these are the datasets organized in curriculum with both different topics and progression of difficulty within a topic. meant to be used with some curriculum training wrapper in the svnapse repo. meant to be used in the exact order as written.    
 
@@ -41,3 +43,8 @@ StarCoderData HTML/CSS (3GB)
 SlimOrca (3GB chatgpt single turn generated outputs)
 OpenAssistant (1GB - human multi-turn quality)
 UltraChat (5GB synthetic multi-turn quality)
+
+
+# Tokenizer 
+
+we build a custom byte level BPE tokenizer for all language related models. english only currently.  
