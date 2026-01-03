@@ -2,3 +2,5 @@ DATA/
 venv/
 TOKENIZED/
 tokenizer_training_data/
+__pycache__
+*.pyc
