@@ -30,7 +30,8 @@ Reddit mix. 17 selected subreddits comments > 5 upvotes. (25gb)
 Bookcorpus (5gb self published mid quality books)
 
 ## world (75gb)
-wikipedia english (19gb complete wikipedia)  
+WikiText-103 (500mb clean wikipedia subset, good for NAS or small model benchmarking)
+wikipedia english (19gb complete wikipedia)
 open web text 2 (56gb web articles linked from reddit)  
 
 ## math (53 gb)

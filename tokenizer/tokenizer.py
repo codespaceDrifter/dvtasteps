@@ -25,7 +25,7 @@ class ByteTokenizer:
 
     SPECIAL_TOKENS = ["<|pad|>", "<|unk|>", "<|bos|>", "<|eos|>"]
 
-    def __init__(self, tokenizer=None):
+    def __init__(self, tokenizer : Tokenizer =None ):
         self.tokenizer = tokenizer
         self.pad_id = None
         self.unk_id = None

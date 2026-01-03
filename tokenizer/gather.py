@@ -9,8 +9,9 @@ RAW_DIR = f"{home}/DATA/raw"
 TEXT_FIELDS = ["text", "content", "body", "article"]
 
 
+# finds which column contains the text (datasets use different names like "text", "content", "body")
+# returns the field name as a string, e.g. "text"
 def get_text_field(ds):
-    """returns the text field name for a dataset"""
     sample = ds[0] if not hasattr(ds, 'keys') else ds[list(ds.keys())[0]][0]
 
     for field in TEXT_FIELDS:
@@ -20,11 +21,12 @@ def get_text_field(ds):
     raise ValueError(f"unknown text field, available: {list(sample.keys())}")
 
 
+# loops through a HF dataset and yields each text string one by one
+# example: for text in iter_texts(ds): print(text)
 def iter_texts(ds):
-    """yields text strings from a dataset (handles DatasetDict or Dataset)"""
     field = get_text_field(ds)
 
-    # DatasetDict has .keys(), Dataset doesn't
+    # DatasetDict has .keys() (multiple splits), Dataset doesn't (single split)
     if hasattr(ds, 'keys'):
         for split in ds.keys():
             for item in ds[split]:
@@ -36,8 +38,9 @@ def iter_texts(ds):
                 yield item[field]
 
 
+# walks DATA/raw and finds all folders containing a HF dataset (has dataset_info.json)
+# returns list of paths like ["/DATA/raw/story/tinystories", "/DATA/raw/code/python", ...]
 def get_all_dataset_paths():
-    """returns all Arrow dataset paths in DATA/raw"""
     paths = []
     for root, dirs, files in os.walk(RAW_DIR):
         if "dataset_info.json" in files:
@@ -45,8 +48,9 @@ def get_all_dataset_paths():
     return paths
 
 
+# yields texts from ALL datasets in DATA/raw, sampling up to per_dataset from each
+# used for tokenizer training so it sees variety without loading everything
 def iter_all_texts(per_dataset=100_000):
-    """yields text from all datasets, limited per dataset for tokenizer training"""
     paths = get_all_dataset_paths()
     print(f"found {len(paths)} datasets, sampling {per_dataset:,} each")
 

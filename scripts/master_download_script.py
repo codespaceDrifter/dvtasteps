@@ -12,6 +12,7 @@ print("--- story ---")
 
 # world
 print("--- world ---")
+#exec(open("scripts/raw_download/world/wikitext103.py").read())
 #exec(open("scripts/raw_download/world/wikipedia.py").read())
 #exec(open("scripts/raw_download/world/openwebtext2.py").read())
 
